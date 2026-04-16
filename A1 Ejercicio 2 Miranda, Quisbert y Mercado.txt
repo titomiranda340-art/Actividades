@@ -1,0 +1,18 @@
+"""Crea una clase "Coche" con propiedades para la marca, el modelo y el año de fabricación, y un método para obtener el número de años que ha pasado desde que se fabricó el coche."""
+
+
+from datetime import datetime
+
+class Coche:
+    def __init__(self, marca, modelo, anio):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+
+    def antiguedad(self):
+        return datetime.now().year - self.anio
+
+
+if __name__ == "__main__":
+    c = Coche("Ford", "Fiesta", 2015)
+    print("Antigüedad:", c.antiguedad())

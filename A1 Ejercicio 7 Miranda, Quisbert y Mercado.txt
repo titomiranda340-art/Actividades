@@ -1,0 +1,18 @@
+"""Crea una clase "Banco" con propiedades para el nombre del banco y la tasa de interés, y métodos para calcular el interés que se obtendría en una cantidad determinada de dinero y el tiempo que se tardaría en duplicar esa cantidad."""
+
+class Banco:
+    def __init__(self, nombre, interes):
+        self.nombre = nombre
+        self.interes = interes
+
+    def calcular(self, dinero, tiempo):
+        return dinero * self.interes * tiempo
+
+    def duplicar(self):
+        return 72 / (self.interes * 100)
+
+
+if __name__ == "__main__":
+    b = Banco("Nación", 0.05)
+    print("Interés:", b.calcular(1000, 2))
+    print("Duplicar:", b.duplicar())

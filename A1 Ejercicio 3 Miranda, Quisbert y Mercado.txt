@@ -1,0 +1,22 @@
+"""Crea una clase "Producto" con propiedades para el nombre, el precio y el stock disponible, y métodos para aumentar o disminuir el stock."""
+
+
+class Producto:
+    def __init__(self, nombre, precio, stock):
+        self.nombre = nombre
+        self.precio = precio
+        self.stock = stock
+
+    def sumar_stock(self, cant):
+        self.stock += cant
+
+    def restar_stock(self, cant):
+        if cant <= self.stock:
+            self.stock -= cant
+
+
+if __name__ == "__main__":
+    p = Producto("Mouse", 5000, 10)
+    p.sumar_stock(5)
+    p.restar_stock(3)
+    print("Stock:", p.stock)

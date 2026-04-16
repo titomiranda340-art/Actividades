@@ -1,0 +1,15 @@
+"""Crea una clase "Estudiante" con propiedades para el nombre, la edad y la carrera, y métodos para obtener y establecer estas propiedades, así como un método para calcular la nota media de un conjunto de exámenes"""
+
+class Estudiante:
+    def __init__(self, nombre, edad, carrera):
+        self.nombre = nombre
+        self.edad = edad
+        self.carrera = carrera
+
+    def promedio(self, notas):
+        return sum(notas) / len(notas)
+
+
+if __name__ == "__main__":
+    e = Estudiante("Ana", 20, "Ingeniería")
+    print("Promedio:", e.promedio([7, 8, 9]))
